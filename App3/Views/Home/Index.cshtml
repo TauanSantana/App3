@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/App.js"></script>
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            <button type="button" class="btn btn-success btn-lg" id="btn-sucesso">Sucesso</button>
+            <div>Total com sucesso: <div style="float: right; margin-right: 15em;" id="div-totalsucesso">0</div> </div>
+        </p>
+        <br />
+        <p>
+            <button type="button" class="btn btn-danger btn-lg" id="btn-problema">Causador de problemas</button>
+            <div>Total com Falhas: <div style="float: right; margin-right: 15em;" id="div-totalfalhas">0</div> </div>
+        </p>
+    </div>
+</div>
+<script>
+
+    $(window).on('load', function () {
+        $("#btn-sucesso").click(function () {
+            app.chamadaSucesso();
+        })
+
+        $("#btn-problema").click(function () {
+            app.chamadaProblema();
+        })
+    })
+</script>
